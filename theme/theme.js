@@ -1,41 +1,27 @@
-const light = {
-  primary: {
-    main: '#5c22d8',
-    text: '#ffffff',
-    success: '#32a852',
-    alert: '#fcba03',
-    dangerText: '#eb4034',
-    components: '#ffffff',
-    background: '#f7f9fc',
-    chart: {
-      dashboard: {
-        entrada: '#5c22d8',
-        saida: '#5c22d8',
-        diferença: '#5c22d8',
-      },
+import { createMuiTheme } from '@material-ui/core/styles';
+
+//Outras cores
+//Material table icons: #7179ad
+
+const theme = createMuiTheme({
+  zIndex: {
+    modal: 1000000000,
+    snackbar: 1000000001,
+  },
+  palette: {
+    primary: {
+      dark: '#401797',
+      main: '#5c22d8',
+      light: '#7c4edf',
+      contrastText: '#fff',
+    },
+    secondary: {
+      dark: '#b240a8',
+      main: '#ff5cf0',
+      light: '#ff7cf3',
+      contrastText: '#fff',
     },
   },
-  secondary: {
-    main: '#ff5cf0',
-    text: '#ffffff',
-  },
-};
+});
 
-const dark = {
-  primary: {
-    main: '#5c22d8',
-    text: '#ffffff',
-    dangerText: '#eb4034',
-  },
-  secondary: {
-    main: '#ff5cf0',
-    text: '#ffffff',
-    components: '#ffffff',
-    background: '#f7f9fc',
-  },
-};
-
-export default {
-  light,
-  dark,
-};
+export default theme;
